@@ -6,10 +6,13 @@
 package com.sv.udb.controlador;
 
 import com.sv.udb.modelo.GruposAlumnos;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -37,5 +40,18 @@ public class gruposAlumnos {
         emf.close();
         return resp;
     }
-    
+    public List<GruposAlumnos>  ConsTodo()
+    {
+        List<GruposAlumnos> resp = new ArrayList<>();
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("PooPU");
+        EntityManager em = emf.createEntityManager();
+        try {
+            TypedQuery<GruposAlumnos> query = em.createNamedQuery("Alumnos.findAll", GruposAlumnos.class);
+            resp = query.getResultList();
+        } catch (Exception ex) {
+
+        }
+        return resp;
+       
+    }
 }

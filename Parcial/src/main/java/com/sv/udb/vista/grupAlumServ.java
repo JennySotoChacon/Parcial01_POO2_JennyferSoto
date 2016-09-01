@@ -43,7 +43,7 @@ public class grupAlumServ extends HttpServlet {
                 {
                     GruposAlumnos obje = new GruposAlumnos();
                     Alumnos obje1 = new Alumnos(Integer.parseInt(request.getParameter("cmbAlumnos")));
-                    Grupos obje2 = new Grupos(Integer.parseInt(request.getParameter("cmbAlumnos")));
+                    Grupos obje2 = new Grupos(Integer.parseInt(request.getParameter("cmbGrupos")));
                     
                     obje.setCodiAlum(obje1);
                     obje.setCodiGrup(obje2);

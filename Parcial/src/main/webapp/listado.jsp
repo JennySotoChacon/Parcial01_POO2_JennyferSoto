@@ -1,8 +1,9 @@
 <%-- 
-    Document   : grup_alum
-    Created on : 01-sep-2016, 14:26:34
+    Document   : listado
+    Created on : 01-sep-2016, 15:48:55
     Author     : Owner
 --%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
@@ -27,27 +28,11 @@
         <li class="slider"></li>
       </ul>
         <!--FIN MENU-->
-        <form action="grupAlumServ" method="Post">
+        <form action="" method="Post">
             <div class="container">
                 <div class="panel panel-default" style="padding: 15px;">
                     <h2>Grupos-Alumnos</h2>
-                    <div class="form-group">                        
-                        <div class="col-sm-12">
-                            <label name="alumnos">Alumnos: </label>
-                            <select name="cmbAlumnos" class="form-control">
-                                <jsp:useBean id="beanAlumnosCtrl" class="com.sv.udb.controlador.AlumnosCtrl" scope="page"/>
-                                <c:forEach items="${beanAlumnosCtrl.ConsTodo()}" var="fila">
-                                    <c:choose>
-                                        <c:when test="{fila.codiAlum eq cmbAlumnos}">
-                                            <option name="nombAlum" value="${fila.codiAlum}" selected="">${fila.nombAlum}</option>
-                                        </c:when>
-                                        <c:otherwise>
-                                            <option name="nombAlum" value="${fila.codiAlum}">${fila.nombAlum}</option>
-                                        </c:otherwise>
-                                    </c:choose>
-                                </c:forEach>
-                            </select>
-                        </div>
+                    <div class="form-group">
                         <div class="col-sm-12">
                             <label name="grupos">Grupos: </label>
                             <select name="cmbGrupos" class="form-control">
@@ -55,15 +40,34 @@
                                 <c:forEach items="${beanGruposCtrl.ConsTodo()}" var="fila">
                                     <c:choose>
                                         <c:when test="{fila.codiGrup eq cmbAlumnos}">
-                                            <option name="nombAlum" value="${fila.codiGrup}" selected="">${fila.nombGrup}</option>
+                                            <option name="nombGrup" value="${fila.codiGrup}" selected="">${fila.nombGrup}</option>
                                         </c:when>
                                         <c:otherwise>
-                                            <option name="nombAlum" value="${fila.codiGrup}">${fila.nombGrup}</option>
+                                            <option name="nombGrup" value="${fila.codiGrup}">${fila.nombGrup}</option>
                                         </c:otherwise>
                                     </c:choose>
                                 </c:forEach>
                             </select>
                         </div>
+                    <div class="panel panel-default"style="padding: 15px;">
+                    <jsp:useBean id="beanGrupos" class="com.sv.udb.controlador.gruposAlumnos" scope="page"/>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Alumnos</th>
+                                <th>Seleccione</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <c:forEach items="${LugaAcceCtrl.ConsTodo()}" var="fila">
+                                <tr>
+                                    <td><c:out value="${fila.codiAlum}"></c:out></td>
+                                    <td> <input type="radio" name="codiRadi" value="${fila.codiAlum}"/></td>
+                                </tr>
+                            </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
                     </div>
                     <div class="btn-group">
                         <input type="submit" name="grupAlumBton" value="Guardar" class="btn btn-success" />
@@ -73,3 +77,4 @@
         </form>
     </body>
 </html>
+
