@@ -26,45 +26,49 @@
         <li class="slider"></li>
       </ul>
         <!--FIN MENU-->
-        <form action="LugaAcceServ" method="Post">
+        <form action="AlumnoServ" method="Post">
             <div class="container">
                 <div class="panel panel-default" style="padding: 15px;">
                     <h2>Alumnos</h2>
                     <div class="form-group">
-                        <input type="hidden" name="codi" id="codi" value="${codi}"/>
-                        <label for="nomb">Nombre: </label>
-                        <input type="text" name="nomb" value="${nomb}"/>
-                        <label for="apel">Apellido: </label>
-                        <input type="text" name="apel" value="${apel}"/>
-                        <label for="fech">Fecha de nacimiento </label>
-                        <input type="text" name="apel" value="${apel}"/>
+                        <div class="col-sm-12">
+                            <input type="hidden" name="codi" id="codi" value="${codi}"/>
+                            <label for="nomb">Nombre: </label>
+                            <input type="text" name="nomb" value="${nomb}"/>
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="apel">Apellido: </label>
+                            <input type="text" name="apel" value="${apel}"/>
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="fech">Fecha de nacimiento: </label>
+                            <input type="date" name="apel" value="${apel}"/>
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="email">E-mail: </label>
+                            <input type="text" name="email" value="${email}"/>
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="tel">Telefono: </label>
+                            <input type="text" name="tel" value="${tel}"/>
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="dire">Direccion: </label>
+                            <input type="text" name="dire" value="${dire}"/>
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="gen" name="gen">Genero: </label>
+                            <select class="form-control" name="gen">
+                                <option value="f">Femenino</option>
+                                <option value="m">Masculino</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="btn-group">
                         <input type="submit" name="lugaAcceBton" value="Guardar" class="btn btn-success" />
-                        <input type="submit" name="lugaAcceBton" value="Modificar" class="btn btn-default" />
-                        <input type="submit" name="lugaAcceBton" value="Consultar" class="btn btn-default" />
-                        <input type="submit" name="lugaAcceBton" value="Eliminar" class="btn btn-danger" />
                     </div>
                 </div>
             </div>
-            <!--<div class="container">
-                <div class="panel panel-default"style="padding: 15px;">
-                    
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Fecha Alta</th>
-                                <th>Seleccione</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                        </tbody>
-                    </table>
-                </div>
-        </div>-->
-
         </form>
     </body>
 </html>
