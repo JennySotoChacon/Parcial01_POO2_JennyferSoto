@@ -21,7 +21,7 @@
         <ul class="menu">
         <li><a href="index.jsp">Alumnos</a></li>
         <li><a href="grup_alum.jsp">Grupos-Alumnos</a></li>
-        <li><a href="listado.jsp">listado de grupos</a></li>
+        <li><a href="seleccionarGrupo.jsp">listado de grupos</a></li>
         <li><a href="#" class="active">Hecho por: Jennyfer Soto</a></li>
         <li class="slider"></li>
       </ul>

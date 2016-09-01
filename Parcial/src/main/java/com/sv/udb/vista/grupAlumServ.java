@@ -51,6 +51,10 @@ public class grupAlumServ extends HttpServlet {
                     mens = new gruposAlumnos().guar(obje) ? "Datos guardados exitosamente" : "Datos NO guardados";
                     request.getRequestDispatcher("/grup_alum.jsp").forward(request, response);
                 }
+                else if (CRUD.equals("Consultar")) {
+                    request.setAttribute("cod", request.getParameter("cmbGrupos"));
+                    request.getRequestDispatcher("/seleccionarGrupo.jsp").forward(request, response);
+                }
             }
     }
 
