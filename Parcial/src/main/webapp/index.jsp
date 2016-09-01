@@ -9,7 +9,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
-        <title>Start Page</title>
+        <title>Parcial POO2</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/style.css">
         <link rel='stylesheet' href='webjars/bootstrap/3.2.0/css/bootstrap.min.css'/>
@@ -20,7 +20,7 @@
         <!--INICIO MENU-->
         <ul class="menu">
         <li><a href="index.jsp">Alumnos</a></li>
-        <li><a href="#">Grupos-Alumnos</a></li>
+        <li><a href="grup_alum.jsp">Grupos-Alumnos</a></li>
         <li><a href="#">listado de grupos</a></li>
         <li><a href="#" class="active">Hecho por: Jennyfer Soto</a></li>
         <li class="slider"></li>

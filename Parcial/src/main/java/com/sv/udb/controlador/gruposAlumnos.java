@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package com.sv.udb.controlador;
-import com.sv.udb.modelo.Alumnos;
+
 import com.sv.udb.modelo.GruposAlumnos;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -13,10 +13,10 @@ import javax.persistence.Persistence;
 
 /**
  *
- * @author Laboratorio
+ * @author Owner
  */
-public class AlumnosGruposCtrl {
-    public boolean guar(Alumnos obje)
+public class gruposAlumnos {
+    public boolean guar(GruposAlumnos obje)
     {
         boolean resp = false;
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("PooPU");
@@ -37,4 +37,5 @@ public class AlumnosGruposCtrl {
         emf.close();
         return resp;
     }
+    
 }
