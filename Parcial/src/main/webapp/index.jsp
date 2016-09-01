@@ -34,27 +34,27 @@
                         <div class="col-sm-12">
                             <input type="hidden" name="codi" id="codi" value="${codi}"/>
                             <label for="nomb">Nombre: </label>
-                            <input type="text" name="nomb" value="${nomb}"/>
+                            <input class="form-control" type="text" name="nomb" value="${nomb}"/>
                         </div>
                         <div class="col-sm-12">
                             <label for="apel">Apellido: </label>
-                            <input type="text" name="apel" value="${apel}"/>
+                            <input class="form-control" type="text" name="apel" value="${apel}"/>
                         </div>
                         <div class="col-sm-12">
                             <label for="fech">Fecha de nacimiento: </label>
-                            <input type="date" name="apel" value="${apel}"/>
+                            <input class="form-control" type="date" name="apel" value="${apel}"/>
                         </div>
                         <div class="col-sm-12">
                             <label for="email">E-mail: </label>
-                            <input type="text" name="email" value="${email}"/>
+                            <input class="form-control" type="text" name="email" value="${email}"/>
                         </div>
                         <div class="col-sm-12">
                             <label for="tel">Telefono: </label>
-                            <input type="text" name="tel" value="${tel}"/>
+                            <input class="form-control" type="text" name="tel" value="${tel}"/>
                         </div>
                         <div class="col-sm-12">
                             <label for="dire">Direccion: </label>
-                            <input type="text" name="dire" value="${dire}"/>
+                            <input class="form-control" type="text" name="dire" value="${dire}"/>
                         </div>
                         <div class="col-sm-12">
                             <label for="gen" name="gen">Genero: </label>
