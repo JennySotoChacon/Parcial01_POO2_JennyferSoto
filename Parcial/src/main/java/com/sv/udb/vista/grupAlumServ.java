@@ -52,7 +52,7 @@ public class grupAlumServ extends HttpServlet {
                     request.getRequestDispatcher("/grup_alum.jsp").forward(request, response);
                 }
                 else if (CRUD.equals("Consultar")) {
-                    request.setAttribute("cod", request.getParameter("cmbGrupos"));
+                    request.setAttribute("codi", request.getParameter("cmbGrupos"));
                     request.getRequestDispatcher("/seleccionarGrupo.jsp").forward(request, response);
                 }
             }

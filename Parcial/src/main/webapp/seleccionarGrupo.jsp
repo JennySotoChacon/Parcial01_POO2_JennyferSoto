@@ -34,7 +34,8 @@
                     <h2>Grupos-Alumnos</h2>
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <table>
+                            <jsp:useBean id="no" class="com.sv.udb.controlador.gruposAlumnos" scope="page"/>
+                            <table class="table">
                                 <thead>
                                     <tr>
                                         <th>Nombre</th>
@@ -42,20 +43,21 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <c:forEach items="${AlumnosCtrl.ConsTodo()}" var="fila">
+                                    <c:forEach items="${gruposAlumnos.ConsTodo()}" var="fila">
                                         <tr>
-                                            <c:if test="${fila.codiGrup.codiGrup == cod}">
+                                            <c:if test="${fila.codiGrup.codiGrup ==codi}">
+
+
                                                 <td><c:out value="${fila.codiAlum.nombAlum}"></c:out></td>
-                                                <td><c:out value="${fila.codiAlum.nombAlum}"></c:out></td>
+                                                <td><c:out value="${fila.codiAlum.apelAlum}"></c:out></td>
+
                                             </c:if>
+
                                         </tr>
                                     </c:forEach>
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <input type="submit" name="grupAlumBton" value="Guardar" class="btn btn-success" />
                     </div>
                 </div>
             </div>
